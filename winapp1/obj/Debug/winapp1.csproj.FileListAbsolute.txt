@@ -1,0 +1,27 @@
+D:\work\C# exercises\winapp1\winapp1\bin\Debug\winapp1.exe
+D:\work\C# exercises\winapp1\winapp1\bin\Debug\winapp1.pdb
+D:\work\C# exercises\winapp1\winapp1\obj\Debug\winapp1.csprojResolveAssemblyReference.cache
+D:\work\C# exercises\winapp1\winapp1\obj\Debug\winapp1.exe
+D:\work\C# exercises\winapp1\winapp1\obj\Debug\winapp1.pdb
+D:\work\C# exercises\winapp1\winapp1\obj\Debug\winapp1.MainForm.resources
+D:\work\C# exercises\winapp1\winapp1\obj\Debug\winapp1.csproj.GenerateResource.Cache
+D:\work\C# exercises\winapp1\winapp1\bin\Debug\Newtonsoft.Json.dll
+D:\work\C# exercises\winapp1\winapp1\bin\Debug\Newtonsoft.Json.xml
+D:\work\C# exercises\CurExch\winapp1\bin\Debug\winapp1.exe
+D:\work\C# exercises\CurExch\winapp1\bin\Debug\winapp1.pdb
+D:\work\C# exercises\CurExch\winapp1\bin\Debug\Newtonsoft.Json.dll
+D:\work\C# exercises\CurExch\winapp1\bin\Debug\Newtonsoft.Json.xml
+D:\work\C# exercises\CurExch\winapp1\obj\Debug\winapp1.csprojResolveAssemblyReference.cache
+D:\work\C# exercises\CurExch\winapp1\obj\Debug\winapp1.MainForm.resources
+D:\work\C# exercises\CurExch\winapp1\obj\Debug\winapp1.csproj.GenerateResource.Cache
+D:\work\C# exercises\CurExch\winapp1\obj\Debug\winapp1.exe
+D:\work\C# exercises\CurExch\winapp1\obj\Debug\winapp1.pdb
+D:\work\C#exercises\CurExch\winapp1\bin\Debug\winapp1.exe
+D:\work\C#exercises\CurExch\winapp1\bin\Debug\winapp1.pdb
+D:\work\C#exercises\CurExch\winapp1\bin\Debug\Newtonsoft.Json.dll
+D:\work\C#exercises\CurExch\winapp1\bin\Debug\Newtonsoft.Json.xml
+D:\work\C#exercises\CurExch\winapp1\obj\Debug\winapp1.csprojResolveAssemblyReference.cache
+D:\work\C#exercises\CurExch\winapp1\obj\Debug\winapp1.MainForm.resources
+D:\work\C#exercises\CurExch\winapp1\obj\Debug\winapp1.csproj.GenerateResource.Cache
+D:\work\C#exercises\CurExch\winapp1\obj\Debug\winapp1.exe
+D:\work\C#exercises\CurExch\winapp1\obj\Debug\winapp1.pdb
