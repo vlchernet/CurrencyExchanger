@@ -37,6 +37,7 @@ namespace winapp1
 			link = pattern;
 			link = link.Replace("valcode=", "valcode=" + comboBox1.Text);
 			link = link.Replace("date=", "date=" + date);
+			Button1Click(sender, e);
 		}
 		void DateTimePicker1ValueChanged(object sender, EventArgs e)
 		{
@@ -45,22 +46,50 @@ namespace winapp1
 			link = pattern;
 			link = link.Replace("valcode=", "valcode=" + currency);
 			link = link.Replace("date=", "date=" + date);
+			Button1Click(sender, e);
 		}
 		void Button1Click(object sender, EventArgs e)
 		{
 			string html = Utility.ReadResponse(link);
 			label1.Text = Utility.JsonParse(html);
 			link = pattern;
-			numericUpDown1.Value = Convert.ToDecimal(label1.Text, new CultureInfo("en-US"));
-		}
+            try
+            {
+                numericUpDown1.Value = Math.Round(Convert.ToDecimal(label1.Text, new CultureInfo("en-US")), 4);
+            }
+            catch (FormatException fex)
+            {
+                Console.WriteLine("Error: {0}", fex.Message);
+            }
+
+        }
 		void Button2Click(object sender, EventArgs e)
 		{
-			//label8.Text = (numericUpDown1.Value * numericUpDown2.Value).ToString();
 			textBox1.Text = Math.Round(numericUpDown1.Value * numericUpDown2.Value, 2).ToString();
 		}
 		void TextBox1TextChanged(object sender, EventArgs e)
 		{
 			numericUpDown2.Value = Convert.ToDecimal(textBox1.Text, new CultureInfo("en-US")) / numericUpDown1.Value;
+		}
+		void MainFormLoad(object sender, EventArgs e)
+		{
+			dateTimePicker1.Value = DateTime.Today;
+		}
+		void NumericUpDown1ValueChanged(object sender, EventArgs e)
+		{
+			Button2Click(sender, e);
+		}
+		void NumericUpDown1TextChanged(object sender, EventArgs e)
+		{
+			Button2Click(sender, e);
+		}
+		void NumericUpDown2ValueChanged(object sender, EventArgs e)
+		{
+			Button2Click(sender, e);
+		}
+		void NumericUpDown2TextChanged(object sender, EventArgs e)
+		{
+			Button2Click(sender, e);
 		}
 	}
 }

@@ -59,7 +59,7 @@ namespace winapp1
 			// 
 			// label1
 			// 
-			this.label1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+			this.label1.BackColor = System.Drawing.Color.LightYellow;
 			resources.ApplyResources(this.label1, "label1");
 			this.label1.ForeColor = System.Drawing.Color.Black;
 			this.label1.Name = "label1";
@@ -67,7 +67,7 @@ namespace winapp1
 			// comboBox1
 			// 
 			this.comboBox1.AllowDrop = true;
-			this.comboBox1.DisplayMember = "1";
+			this.comboBox1.BackColor = System.Drawing.SystemColors.Info;
 			resources.ApplyResources(this.comboBox1, "comboBox1");
 			this.comboBox1.FormattingEnabled = true;
 			this.comboBox1.Items.AddRange(new object[] {
@@ -77,16 +77,18 @@ namespace winapp1
 			resources.GetString("comboBox1.Items3"),
 			resources.GetString("comboBox1.Items4"),
 			resources.GetString("comboBox1.Items5"),
-			resources.GetString("comboBox1.Items6")});
+			resources.GetString("comboBox1.Items6"),
+			resources.GetString("comboBox1.Items7")});
 			this.comboBox1.Name = "comboBox1";
 			this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.ComboBox1SelectedIndexChanged);
 			// 
 			// dateTimePicker1
 			// 
 			resources.ApplyResources(this.dateTimePicker1, "dateTimePicker1");
+			this.dateTimePicker1.CalendarMonthBackground = System.Drawing.Color.LightYellow;
 			this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
 			this.dateTimePicker1.Name = "dateTimePicker1";
-			this.dateTimePicker1.Value = new System.DateTime(2018, 11, 15, 0, 0, 0, 0);
+			this.dateTimePicker1.Value = new System.DateTime(2018, 11, 5, 0, 0, 0, 0);
 			this.dateTimePicker1.ValueChanged += new System.EventHandler(this.DateTimePicker1ValueChanged);
 			// 
 			// button1
@@ -98,22 +100,26 @@ namespace winapp1
 			// 
 			// label2
 			// 
+			this.label2.BackColor = System.Drawing.Color.LightYellow;
 			resources.ApplyResources(this.label2, "label2");
 			this.label2.Name = "label2";
 			// 
 			// label3
 			// 
+			this.label3.BackColor = System.Drawing.Color.LightYellow;
 			resources.ApplyResources(this.label3, "label3");
 			this.label3.Name = "label3";
 			// 
 			// label7
 			// 
+			this.label7.BackColor = System.Drawing.Color.LightYellow;
 			resources.ApplyResources(this.label7, "label7");
 			this.label7.Name = "label7";
 			// 
 			// numericUpDown1
 			// 
-			this.numericUpDown1.DecimalPlaces = 2;
+			this.numericUpDown1.BackColor = System.Drawing.SystemColors.Info;
+			this.numericUpDown1.DecimalPlaces = 4;
 			resources.ApplyResources(this.numericUpDown1, "numericUpDown1");
 			this.numericUpDown1.Increment = new decimal(new int[] {
 			1,
@@ -121,19 +127,24 @@ namespace winapp1
 			0,
 			131072});
 			this.numericUpDown1.Name = "numericUpDown1";
+			this.numericUpDown1.ValueChanged += new System.EventHandler(this.NumericUpDown1ValueChanged);
 			// 
 			// label4
 			// 
+			this.label4.BackColor = System.Drawing.Color.LightYellow;
 			resources.ApplyResources(this.label4, "label4");
 			this.label4.Name = "label4";
 			// 
 			// label5
 			// 
+			this.label5.BackColor = System.Drawing.Color.LightYellow;
 			resources.ApplyResources(this.label5, "label5");
 			this.label5.Name = "label5";
 			// 
 			// numericUpDown2
 			// 
+			this.numericUpDown2.BackColor = System.Drawing.SystemColors.Info;
+			this.numericUpDown2.DecimalPlaces = 2;
 			resources.ApplyResources(this.numericUpDown2, "numericUpDown2");
 			this.numericUpDown2.Increment = new decimal(new int[] {
 			10,
@@ -151,9 +162,11 @@ namespace winapp1
 			0,
 			0,
 			0});
+			this.numericUpDown2.ValueChanged += new System.EventHandler(this.NumericUpDown2ValueChanged);
 			// 
 			// label6
 			// 
+			this.label6.BackColor = System.Drawing.Color.LightYellow;
 			resources.ApplyResources(this.label6, "label6");
 			this.label6.Name = "label6";
 			// 
@@ -166,6 +179,7 @@ namespace winapp1
 			// 
 			// textBox1
 			// 
+			this.textBox1.BackColor = System.Drawing.Color.LightYellow;
 			resources.ApplyResources(this.textBox1, "textBox1");
 			this.textBox1.Name = "textBox1";
 			this.textBox1.TextChanged += new System.EventHandler(this.TextBox1TextChanged);
@@ -174,6 +188,7 @@ namespace winapp1
 			// 
 			resources.ApplyResources(this, "$this");
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+			this.BackColor = System.Drawing.SystemColors.Control;
 			this.Controls.Add(this.textBox1);
 			this.Controls.Add(this.button2);
 			this.Controls.Add(this.label6);
@@ -190,6 +205,7 @@ namespace winapp1
 			this.Controls.Add(this.label1);
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
 			this.Name = "MainForm";
+			this.Load += new System.EventHandler(this.MainFormLoad);
 			((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
 			this.ResumeLayout(false);

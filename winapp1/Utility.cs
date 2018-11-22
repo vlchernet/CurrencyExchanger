@@ -13,23 +13,34 @@ using Newtonsoft.Json.Linq;
 
 namespace winapp1
 {
-	/// <summary>
-	/// Description of Utility.
-	/// </summary>
-	public class Utility
-	{
-		public Utility()
-		{
-		}
-		public static string ReadResponse(string req) {
-			HttpWebRequest  myHttpWebRequest  = (HttpWebRequest)HttpWebRequest.Create(req);
+    /// <summary>
+    /// Description of Utility.
+    /// </summary>
+    public class Utility
+    {
+        public Utility()
+        {
+        }
+        public static string ReadResponse(string req)
+        {
+            HttpWebRequest myHttpWebRequest = (HttpWebRequest)HttpWebRequest.Create(req);
             HttpWebResponse myHttpWebResponse = (HttpWebResponse)myHttpWebRequest.GetResponse();
             StreamReader myStreamReader = new StreamReader(myHttpWebResponse.GetResponseStream());
             return myStreamReader.ReadToEnd();
-		}
-		public static string JsonParse(string json) {
-			JArray content = JArray.Parse(json);
-			return (string)content[0]["rate"];
-		}
-	}
+        }
+        public static string JsonParse(string json)
+        {
+            string result = "";
+            try
+            {
+                JArray content = JArray.Parse(json);
+                result = result + (string)content[0]["rate"];
+            }
+            catch (ArgumentOutOfRangeException outOfRange)
+            {
+                Console.WriteLine("Error: {0}", outOfRange.Message);
+            }
+            return result;
+        }
+    }
 }
